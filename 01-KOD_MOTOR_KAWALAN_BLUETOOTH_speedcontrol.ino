@@ -1,16 +1,11 @@
 // --- KOD MOTOR KAWALAN BLUETOOTH SPEED-Control ---
+//Disediakan Oleh: Abang Irwan Hafizal//KKSJ
 
 #include "BluetoothSerial.h"
-
-
-
 
 // Definisi pin butang
 #define bttnA        26
 #define bttnB        32
-
-
-
 
 // Definisi pin dan nama pemboleh ubah motor
 const int motorkananA1 = 18;    
@@ -19,18 +14,11 @@ const int motorkiriB1 = 17;
 const int motorkiriB2 = 12;    
 const int buzzer = 25;
 
-
 int vSpeed=200;
-
-
-
 
 // Objek Bluetooth Serial dan nama Bluetooth
 BluetoothSerial my_bluetooth;
-const char* nama_bluetooth = "FoosBall KKSJaih";
-
-
-
+const char* nama_bluetooth = "NamaBlueToothSENDIRI";
 
 void setup() {
   // --- Tetapan Pin Motor ---
@@ -42,15 +30,9 @@ void setup() {
   // --- Tetapan Pin Buzzer ---
   pinMode(buzzer, OUTPUT);
 
-
-
-
   // --- Tetapan Pin Butang (Amalan Terbaik) ---
   pinMode(bttnA, INPUT_PULLUP);
   pinMode(bttnB, INPUT_PULLUP);
-
-
-
 
   // --- Mulakan Komunikasi Serial (untuk debugging) & Bluetooth ---
   Serial.begin(115200);
@@ -58,8 +40,6 @@ void setup() {
   my_bluetooth.begin(nama_bluetooth); // Memulakan Bluetooth
   Serial.println("Robot sedia menerima arahan melalui Bluetooth...");
 }
-
-
 
 
 void loop() {
@@ -86,8 +66,6 @@ void loop() {
     else if (dat == '4'){
       vSpeed=200;
       Serial.println(dat);}
-
-
 
 
     // Logik pergerakan motor dari kod terkini anda dimasukkan di sini
