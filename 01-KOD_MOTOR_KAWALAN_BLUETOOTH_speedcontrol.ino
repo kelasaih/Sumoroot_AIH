@@ -1,5 +1,5 @@
 // --- KOD MOTOR KAWALAN BLUETOOTH SPEED-Control ---
-//Disediakan Oleh: Abang Irwan Hafizal//KKSJ
+//Disediakan Oleh: Abang Irwan Hafizal // KKSJ
 
 #include "BluetoothSerial.h"
 
